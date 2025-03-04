@@ -1,16 +1,22 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Working?</h1>
+    <!--just a test-->
+  </div>
 </template>
 
 <script setup>
+//fetch here instead without route.params.id? need to go to vue notes for reference
 import { red, onMounted } from "vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
-const pokemon = ref("");
+const centers = ref("");
 import { computed } from "vue";
 const props = defineProps({
-  facility_number: Object, //could be String instead of Object
+  facility_name: String, //could be String instead of Object
   id: Number, //will probably change
+  zip_code: Number,
+  street_address: String,
 });
 async function getCenters() {
   let res = await fetch(
@@ -18,7 +24,7 @@ async function getCenters() {
   );
   let centersData = await res.json();
   let centersResult = centersData.results;
-  return centersResult;
+  console.log(centersResult);
 }
 getCenters();
 </script>
