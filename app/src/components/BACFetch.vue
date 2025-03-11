@@ -1,9 +1,9 @@
 <template>
   <div class="card">
+    <!--probably need to change-->
     <div v-for="center in centers">
-      <!--probably need to change-->
-      <h2>{{ facility_name }}</h2>
       <!--will figure this out later-->
+      <h2>{{ facility_name }}</h2>
       <h3>{{ id }}</h3>
       <h3>{{ zip_code }}</h3>
       <h3>{{ street_address }}</h3>
@@ -22,6 +22,7 @@ const route = useRoute();
 const centers = ref("");
 import { computed } from "vue";
 const props = defineProps({
+  //does it need to be a const variable?
   facility_name: String, //could be Object or String
   id: Number, //will probably change
   zip_code: Number,
@@ -43,5 +44,9 @@ getCenters();
   border: 8px solid silver;
   align-items: center;
   position: relative;
+}
+h2 {
+  text-decoration: underline;
+  font-weight: bold;
 }
 </style>
