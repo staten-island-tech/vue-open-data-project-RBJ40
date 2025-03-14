@@ -3,6 +3,7 @@
   <div class="dropdown-menu">
     <!--is this even how to make a drop down menu?-->
     <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <!--myFunction() subject to change-->
     <a href="#">State</a>
     <a href="#">City</a>
     <a href="#">Borough</a>
@@ -11,6 +12,10 @@
 
 <script setup></script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.dropbtn {
+  box-shadow: 8px gray;
+}
+</style>
 
 <style scoped></style>
