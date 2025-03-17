@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <!--probably need to change-->
-    <div v-for="center in centers">
+    <div v-for="center in centers" :key="facility_name">
       <!--will figure this out later-->
       <h2>{{ facility_name }}</h2>
       <h3>{{ id }}</h3>
@@ -21,16 +21,16 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 const centers = ref("");
 import { computed } from "vue";
-const props = defineProps({
+/* const props = defineProps({
   //does it need to be a const variable?
   facility_name: String, //could be Object or String
   id: Number, //will probably change
   zip_code: Number,
   street_address: String,
-});
+}); */
 async function getCenters() {
   let res = await fetch(
-    `https://data.cityofnewyork.us/resource/9d9t-bmk7.json${route.params.id}` //route.params.id might not be needed here yet
+    `https://data.cityofnewyork.us/resource/9d9t-bmk7.json`
   );
   let centersData = await res.json();
   let centersResult = centersData.results;
