@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-// import { groceryItems } from "@/components/GroceryItems.vue";
+import BACFetch from "@/components/BACFetch.vue";
 const props = defineProps({
   //does it need to be a const variable?
   facility_name: String, //could be Object or String

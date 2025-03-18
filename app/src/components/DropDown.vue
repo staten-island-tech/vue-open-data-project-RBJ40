@@ -2,11 +2,13 @@
 <template>
   <div class="dropdown-menu">
     <!--is this even how to make a drop down menu?-->
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <button onclick="dropDown()" class="dropbtn">Dropdown</button>
     <!--myFunction() subject to change-->
-    <a href="#">State</a>
-    <a href="#">City</a>
-    <a href="#">Borough</a>
+    <div class="dropdown-content">
+      <a href="#">State</a>
+      <a href="#">City</a>
+      <a href="#">Borough</a>
+    </div>
   </div>
 </template>
 
@@ -14,7 +16,10 @@
 
 <style lang="css" scoped>
 .dropbtn {
-  box-shadow: 8px gray;
+  box-shadow: 8px 8px gray;
+}
+.dropdown-content {
+  position: fixed;
 }
 </style>
 
