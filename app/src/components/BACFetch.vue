@@ -16,7 +16,7 @@
 <script setup>
 //this script is a mess. props will probably be moved to another vue file
 //fetch here instead without route.params.id? need to go to vue notes for reference
-import { red, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
 const centers = ref("");

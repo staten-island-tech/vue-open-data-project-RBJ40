@@ -5,6 +5,12 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <div>
+    <RouterLink></RouterLink>
+    <!--chatgpt-->
+    <RouterLink to="/about">Go to About</RouterLink>
+    <RouterLink to="/" exact>Home</RouterLink>
+    <RouterLink to="/about" @click="handleClick">About</RouterLink>
+    <!--end of chatgpt-->
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -13,6 +19,7 @@ import HelloWorld from "./components/HelloWorld.vue";
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <router-view></router-view>
 </template>
 
 <style scoped>

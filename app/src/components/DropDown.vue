@@ -3,7 +3,7 @@
   <div class="dropdown-menu">
     <!--is this even how to make a drop down menu?-->
     <button onclick="dropDown()" class="dropbtn">Dropdown</button>
-    <!--myFunction() subject to change-->
+    <button @click="handleClick">About</button>
     <div class="dropdown-content">
       <a href="#">State</a>
       <a href="#">City</a>
